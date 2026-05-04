@@ -1,0 +1,101 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import ReactNative from "./icons/ReactNative.astro";
+import Java from "./icons/Java.astro";
+import SpringBoot from "./icons/SpringBoot.astro";
+import MySQL from "./icons/MySQL.astro";
+import Laravel from "./icons/Laravel.astro";
+import Youtube from "./icons/Youtube.astro";
+
+interface Tag {
+  name: string;
+  class: string;
+  icon: any;
+}
+
+const TAGS = {
+  REACT_NATIVE: {
+    name: "React Native",
+    class: "bg-black text-white hover:bg-gray-600",
+    icon: ReactNative,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-[#C74600] text-white hover:bg-[#7A2B00]",
+    icon: Java,
+  },
+  SPRING_BOOT: {
+    name: "Spring Boot",
+    class: "bg-[#6DB33F] text-white hover:bg-[#3D6B1E]",
+    icon: SpringBoot,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#4f46e5] text-white hover:bg-[#1E1B8A]",
+    icon: MySQL,
+  },
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-[#FF2D20] text-white hover:bg-[#991A10]",
+    icon: Laravel,
+  },
+  YOUTUBE: {
+    name: "Youtube",
+    class: "bg-white text-black hover:bg-gray-400",
+    icon: Youtube,
+  },
+};
+
+const EXPERIENCIE = [
+  {
+    date: "2026",
+    title: "InDrive Clone − Full Stack & Mobile App",
+    type: "project",
+    description:
+      "Aplicación tipo ride-hailing con negociación de tarifas en tiempo real. App móvil en React Native y backend en Java (Spring Boot) con MySQL. Implementa geolocalización, matching entre usuarios y conductores, gestión de viajes y simulación de pagos.",
+    link: "https://github.com/Hisoka15/Indrive-Clone",
+    tags: [TAGS.REACT_NATIVE, TAGS.JAVA, TAGS.SPRING_BOOT, TAGS.MYSQL],
+  },
+  {
+    date: "2025",
+    title: "Sistema de Inventario − Full Stack Web App",
+    type: "project",
+    description:
+      "Sistema de gestión de inventario con control de stock, dashboard administrativo y reportes. Backend en Laravel y MySQL, optimizando la gestión de productos y reduciendo errores manuales.",
+    link: "https://github.com/Hisoka15/SistemaControlInventario",
+    tags: [TAGS.LARAVEL, TAGS.MYSQL, TAGS.YOUTUBE],
+  },
+  {
+    date: "Jul 2023 - Ene 2024",
+    title: "Soporte Informático − Monte Rosa",
+    type: "work",
+    description:
+      "Resolución de incidencias en hardware, software y red. Experiencia trabajando con usuarios reales y resolución de problemas en entornos productivos.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+
+        {experiencie.tags && (
+          <ul class="flex gap-x-2 flex-row mt-3 flex-wrap">
+            {experiencie.tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 border border-white/10 items-center px-2 transition-colors cursor-default`}
+                >
+                  <tag.icon class="size-5" />
+                  <span>{tag.name}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    ))
+  }
+</ol>

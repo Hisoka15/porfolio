@@ -1,0 +1,128 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+---
+
+<Layout
+  title="Carlos Briceño - Full Stack Developer"
+  description="Desarrollador Full Stack especializado en React, Laravel y Spring Boot. Construyo aplicaciones web y móviles enfocadas en soluciones reales."
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <div class="flex flex-col md:flex-row items-start gap-8">
+        <img
+          class="rounded-full aspect-square size-24 md:size-32 lg:size-40 mb-4 md:mb-0 flex-shrink-0 mt-8 object-cover object-top"
+          src="/Horacio2.jpg"
+          alt="Carlos Briceño - Full Stack Developer"
+        />
+
+        <div>
+          <h1
+            class="text-white text-3xl md:text-4xl lg:text-5xl font-bold pb-6 lg:pb-10"
+          >
+            Carlos Briceño
+          </h1>
+
+          <h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-white">
+            <span class="font-semibold">Desarrollador Full Stack</span>
+            <span class="text-yellow-200">
+              especializado en React, Laravel y Spring Boot
+            </span>.
+            <span class="text-red-200">De Chinandega, Nicaragua</span>.
+            <span class="text-sky-200">
+              Construyo aplicaciones web y móviles enfocadas en soluciones
+              reales.
+            </span>
+          </h2>
+
+          <nav class="flex gap-4 mt-8 flex-nowrap">
+            <SocialPill
+              href="https://www.linkedin.com/in/carlos-horacio-brice%C3%B1o-betancourt-986309267/?originalSubdomain=ni"
+            >
+              <LinkedInIcon class="size-4 md:size-6 text-white/80" />
+              LinkedIn
+            </SocialPill>
+
+            <SocialPill href="https://github.com/Hisoka15">
+              <GitHubIcon class="size-4 md:size-6 text-white/80" />
+              GitHub
+            </SocialPill>
+
+            <SocialPill
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=horaciobriceo2214@gmail.com"
+            >
+              <MailIcon class="size-4 md:size-6" />
+              horaciobriceo2214@gmail.com
+            </SocialPill>
+          </nav>
+        </div>
+      </div>
+    </SectionContainer>
+
+    <!-- SOBRE MI -->
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
+      >
+        <CodeIcon class="size-7" />
+        Sobre mí
+      </h2>
+
+      <div class="text-white text-lg space-y-4 max-w-[700px]">
+        <p>
+          Ingeniero en Sistemas (2023) enfocado en desarrollo Full Stack. He
+          desarrollado aplicaciones web y móviles utilizando React, React
+          Native, Laravel y Spring Boot, integrando APIs y bases de datos MySQL.
+        </p>
+
+        <p>
+          Entre mis proyectos destaca un clon funcional de InDrive con
+          geolocalización y gestión de viajes, así como un sistema de inventario
+          con control de stock y dashboard administrativo.
+        </p>
+
+        <p>
+          Trabajo con Git, metodologías ágiles y buenas prácticas de desarrollo.
+          Me enfoco en construir soluciones funcionales, escalables y bien
+          estructuradas.
+        </p>
+
+        <div class="flex gap-4 flex-wrap mt-4">
+          <span
+            class="bg-yellow-800/20 text-yellow-200 px-3 py-1 rounded-full text-sm"
+          >
+            📍 Chinandega, Nicaragua
+          </span>
+          <span
+            class="bg-green-800/20 text-green-200 px-3 py-1 rounded-full text-sm"
+          >
+            🎓 Ingeniería en Sistemas (2023)
+          </span>
+          <span
+            class="bg-purple-800/20 text-purple-200 px-3 py-1 rounded-full text-sm"
+          >
+            💻 Full Stack Developer
+          </span>
+        </div>
+      </div>
+    </SectionContainer>
+
+    <!-- EXPERIENCIA -->
+    <SectionContainer id="experiencia">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
+      >
+        <Briefcase class="size-7" />
+        Experiencia
+      </h2>
+      <Experience />
+    </SectionContainer>
+  </main>
+</Layout>
