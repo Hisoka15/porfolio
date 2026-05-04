@@ -14,7 +14,7 @@ import CodeIcon from "../components/icons/Code.astro";
   title="Carlos Briceño - Full Stack Developer"
   description="Desarrollador Full Stack especializado en React, Laravel y Spring Boot. Construyo aplicaciones web y móviles enfocadas en soluciones reales."
 >
-  <main class="px-4">
+  <main class="px-3 sm:px-4 overflow-x-hidden">
     <SectionContainer class="py-44 pb-32">
       <div class="flex flex-col md:flex-row items-start gap-8">
         <img
@@ -23,14 +23,16 @@ import CodeIcon from "../components/icons/Code.astro";
           alt="Carlos Briceño - Full Stack Developer"
         />
 
-        <div>
+        <div class="w-full min-w-0">
           <h1
             class="text-white text-3xl md:text-4xl lg:text-5xl font-bold pb-6 lg:pb-10"
           >
             Carlos Briceño
           </h1>
 
-          <h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-white">
+          <h2
+            class="text-lg sm:text-xl lg:text-2xl text-balance max-w-[700px] text-white"
+          >
             <span class="font-semibold">Desarrollador Full Stack</span>
             <span class="text-yellow-200">
               especializado en React, Laravel y Spring Boot
@@ -42,24 +44,27 @@ import CodeIcon from "../components/icons/Code.astro";
             </span>
           </h2>
 
-          <nav class="flex gap-4 mt-8 flex-nowrap">
+          <nav class="flex gap-1.5 sm:gap-2 md:gap-4 mt-8 flex-nowrap">
             <SocialPill
               href="https://www.linkedin.com/in/carlos-horacio-brice%C3%B1o-betancourt-986309267/?originalSubdomain=ni"
             >
-              <LinkedInIcon class="size-4 md:size-6 text-white/80" />
-              LinkedIn
+              <LinkedInIcon class="size-3 sm:size-4 md:size-6 text-white/80" />
+              <span class="hidden sm:inline">LinkedIn</span>
+              <span class="sm:hidden text-[10px]">In</span>
             </SocialPill>
 
             <SocialPill href="https://github.com/Hisoka15">
-              <GitHubIcon class="size-4 md:size-6 text-white/80" />
-              GitHub
+              <GitHubIcon class="size-3 sm:size-4 md:size-6 text-white/80" />
+              <span class="hidden sm:inline">GitHub</span>
+              <span class="sm:hidden text-[10px]">GH</span>
             </SocialPill>
 
             <SocialPill
               href="https://mail.google.com/mail/?view=cm&fs=1&to=horaciobriceo2214@gmail.com"
             >
-              <MailIcon class="size-4 md:size-6" />
-              horaciobriceo2214@gmail.com
+              <MailIcon class="size-3 sm:size-4 md:size-6" />
+              <span class="hidden sm:inline">horaciobriceo2214@gmail.com</span>
+              <span class="sm:hidden text-[10px]">@</span>
             </SocialPill>
           </nav>
         </div>
@@ -69,13 +74,13 @@ import CodeIcon from "../components/icons/Code.astro";
     <!-- SOBRE MI -->
     <SectionContainer id="sobre-mi">
       <h2
-        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
+        class="text-2xl sm:text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
       >
-        <CodeIcon class="size-7" />
+        <CodeIcon class="size-6 sm:size-7" />
         Sobre mí
       </h2>
 
-      <div class="text-white text-lg space-y-4 max-w-[700px]">
+      <div class="text-white text-base sm:text-lg space-y-4 max-w-[700px]">
         <p>
           Ingeniero en Sistemas (2023) enfocado en desarrollo Full Stack. He
           desarrollado aplicaciones web y móviles utilizando React, React
@@ -94,19 +99,19 @@ import CodeIcon from "../components/icons/Code.astro";
           estructuradas.
         </p>
 
-        <div class="flex gap-4 flex-wrap mt-4">
+        <div class="flex gap-2 sm:gap-4 flex-wrap mt-4">
           <span
-            class="bg-yellow-800/20 text-yellow-200 px-3 py-1 rounded-full text-sm"
+            class="bg-yellow-800/20 text-yellow-200 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm"
           >
             📍 Chinandega, Nicaragua
           </span>
           <span
-            class="bg-green-800/20 text-green-200 px-3 py-1 rounded-full text-sm"
+            class="bg-green-800/20 text-green-200 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm"
           >
             🎓 Ingeniería en Sistemas (2023)
           </span>
           <span
-            class="bg-purple-800/20 text-purple-200 px-3 py-1 rounded-full text-sm"
+            class="bg-purple-800/20 text-purple-200 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm"
           >
             💻 Full Stack Developer
           </span>
@@ -117,9 +122,9 @@ import CodeIcon from "../components/icons/Code.astro";
     <!-- EXPERIENCIA -->
     <SectionContainer id="experiencia">
       <h2
-        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
+        class="text-2xl sm:text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
       >
-        <Briefcase class="size-7" />
+        <Briefcase class="size-6 sm:size-7" />
         Experiencia
       </h2>
       <Experience />
